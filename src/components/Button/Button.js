@@ -8,7 +8,12 @@ function Button(props) {
     classes += props.triple ? 'triple' : ''
 
     return(
-        <button className={classes}>{props.label}</button>
+        <button
+            onClick={() => {
+                props.click && props.click(props.label)
+                props.clear && props.clear()
+            }} 
+            className={classes}>{props.label}</button>
     )
 }
 

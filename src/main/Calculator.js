@@ -50,7 +50,7 @@ class Calculator extends Component {
             values[1] = 0;
 
             this.setState({
-                displayValue: values[0],
+                displayValue: String(values[0]),
                 operation: equals ? null : operation,
                 values: [...values],
                 current: equals ? 0 : 1,
